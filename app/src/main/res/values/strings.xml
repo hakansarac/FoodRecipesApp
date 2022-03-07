@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FoodRecipes</string>
+
+    <!-- nav bar strings -->
+    <string name="recipes_fragment">Recipes</string>
+    <string name="favorites_fragment">Favorites</string>
+    <string name="food_joke_fragment">Joke</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".views.fragments.recipes.RecipesFragment">
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:id="@+id/shimmer_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:shimmer_demo_child_count="3"
+        app:shimmer_demo_layout="@layout/placeholder_row_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/white"
+        android:clickable="true"
+        android:src="@drawable/ic_restaurant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <ImageView
+        android:id="@+id/image_view_error"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.5"
+        android:src="@drawable/ic_sad"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <TextView
+        android:id="@+id/text_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet Connection"
+        android:alpha="0.5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_error"
+        app:layout_constraintStart_toStartOf="@+id/image_view_error"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_error" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
